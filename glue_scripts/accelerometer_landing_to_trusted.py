@@ -52,7 +52,7 @@ accelerometer_trusted_dynamic = DynamicFrame.fromDF(
 # ── 4. Write to S3 and update Glue catalog ────────────────────────────────────
 sink = glueContext.getSink(
     connection_type="s3",
-    path="s3://YOUR-BUCKET/accelerometer/trusted/",
+    path="s3://satyam-stedi-lakehouse/accelerometer_trusted/",
     enableUpdateCatalog=True,
     updateBehavior="UPDATE_IN_DATABASE",
     partitionKeys=[]
